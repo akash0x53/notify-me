@@ -45,13 +45,4 @@ class SendSms:
         else:
             print 'You haven\'t logged in yet, please re-check credentials that you provided.'
     
-        
-#if __name__=="__main__":
-#    a=SendSms()
-    
-#    a.Login("8055737517","abc321")
-#    a.send_sms("8055737517","temp msg")
-    
-    
-    
-
+      
