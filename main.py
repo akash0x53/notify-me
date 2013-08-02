@@ -34,8 +34,9 @@ if __name__=="__main__" :
 			print 'sending SMS..'
 			print 'Logging in...'
 			sms_send=SendSms()
-			sms_send.Login('8055737517', 'abc321')
-			sms_send.send_sms('8055737517', 'Result is out. Please check website. This is AutoKash.')
+			#NOTE: Replace your fullon number and password
+			sms_send.Login('NUMBER', 'pass')
+			sms_send.send_sms('SEND_TO', 'MSG. This is AutoKash')
 			print 'Message is sent.'
 			isMatch=True
 			break
