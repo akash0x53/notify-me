@@ -8,7 +8,7 @@ class GenHash:
     
     def __init__(self,link):
         self.link=link
-        self.initial_hash=self.extract_header()
+        self.initial_hash=self.header_hash()
     
     def header_hash(self):
         header=ulib.urlopen(self.link).headers
