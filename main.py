@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 
+#Author: Akash Shende
+#Contact: akash0x53s@gmail.com
+
+#TODO: 
+# 1] web interface using Django
+# 2] sending email
+# 3] better scheduling method
+
+
 import urllib2 as ulib
 from time import sleep
 from md5 import md5
