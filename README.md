@@ -9,7 +9,7 @@ ToDo
 =========  
  * web interface using Django
  * sending email
- * better scheduling method
+ * Daemonizing 
 
 
 
