@@ -25,8 +25,8 @@ if __name__=="__main__" :
 	
 	isMatch=False
 	
-	if len(sys.argv)<=1 :
-		print 'Usage: notifier <weg page link>'
+	if len(sys.argv)!=5 :
+		print 'Usage: notifier <weg page link> <fullonsms login number> <password> <notification text>'
 		sys.exit(1)
 		
 	
@@ -34,6 +34,10 @@ if __name__=="__main__" :
 	worker=GenHash(sys.argv[1])
 	__initial_hash__=worker.initial_hash
 	print 'initial hash',__initial_hash__
+
+	mobile=sys.argv[2]
+	passwd=sys.argv[3]
+	msg=sys.argv[4]
 	
 	
 	while not isMatch:
@@ -43,13 +47,13 @@ if __name__=="__main__" :
 			print 'sending SMS..'
 			print 'Logging in...'
 			sms_send=SendSms()
-			#NOTE: Replace your fullon number and password
-			sms_send.Login('NUMBER', 'pass')
-			sms_send.send_sms('SEND_TO', 'MSG. This is AutoKash')
+		
+			sms_send.Login(mobile,passwd)
+			sms_send.send_sms(passwd,msg+' This is AutoKash')
 			print 'Message is sent.'
 			isMatch=True
 			break
 					
-		sleep(60*10)
+		sleep(60*10) #10 min delay
 	
 	
