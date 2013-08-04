@@ -5,7 +5,7 @@ An attempt to notify myself through SMS  whenever there is change made on a give
 
 ToDo  
 =========  
- *web interface using Django
+ * web interface using Django
  * sending email
  * better scheduling method
 
